@@ -6,6 +6,7 @@ import Testimonials from "./components/Testimonials.jsx";
 import InstallBanner from "./components/InstallBanner.jsx";
 import Home from "./pages/Home.jsx";
 import TestimonialPage from "./pages/TestimonialPage.jsx";
+import Faq from "./pages/Faq.jsx";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/parcours" element={<Testimonials />} />
         <Route path="/parcours/:id" element={<TestimonialPage />} />
+        <Route path="/faq" element={<Faq />} />
       </Routes>
       <Footer />
       <InstallBanner />
