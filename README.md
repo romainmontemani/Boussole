@@ -48,8 +48,8 @@ Le site s'ouvre alors sur `http://localhost:5173`.
 
 ## Décisions prises pour le quiz (étape 2)
 
-- 4 profils types (`src/data/profiles.js`) : analytique-scientifique,
-  relationnel-terrain, créatif-expression, organisateur-stratège — un par
+- 5 profils types (`src/data/profiles.js`) : analytique-scientifique,
+  relationnel-terrain, créatif-expression, organisateur-stratège, Manuel-Artisanal — un par
   témoignage (`src/data/testimonials.js`), pas de témoignage orphelin.
 - 12 questions, chacune pondérée (poids 1 ou 1.5 pour les questions
   "valeurs"), chaque option distribuant des points à un ou deux profils
