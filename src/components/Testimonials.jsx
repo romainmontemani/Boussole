@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import { PROFILES } from "../data/profiles.js";
 import { TESTIMONIALS } from "../data/testimonials.js";
+import pilierDeculpabiliserImg from "../assets/images/pilier-deculpabiliser.jpg";
 
 export default function Testimonials() {
   return (
     <section className="testi-section" id="temoignages">
       <div className="wrap">
+        <div className="testi-banner">
+          <img src={pilierDeculpabiliserImg} alt="Personne apaisée, sans jugement sur son parcours" />
+        </div>
         <div className="section-head">
           <div className="eyebrow">Parcours</div>
           <h2>Ils ont douté aussi.</h2>
