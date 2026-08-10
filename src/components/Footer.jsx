@@ -4,6 +4,16 @@ import Logo from "./Logo.jsx";
 export default function Footer() {
   return (
     <footer>
+      <div className="footer-mark" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="0.6">
+          <circle cx="100" cy="100" r="98" />
+          <circle cx="100" cy="100" r="74" />
+          <line x1="100" y1="2" x2="100" y2="198" />
+          <line x1="2" y1="100" x2="198" y2="100" />
+          <line x1="30" y1="30" x2="170" y2="170" />
+          <line x1="170" y1="30" x2="30" y2="170" />
+        </svg>
+      </div>
       <div className="wrap footer-inner">
         <div className="footer-row footer-brand">
           <Logo size={20} />
