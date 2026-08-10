@@ -1,4 +1,5 @@
 import { useState } from "react";
+import faqImg from "../assets/images/faq.jpg";
 
 const FAQ_ITEMS = [
   {
@@ -71,6 +72,9 @@ export default function Faq() {
   return (
     <section className="faq-section">
       <div className="wrap">
+        <div className="faq-banner">
+          <img src={faqImg} alt="Personne qui consulte des questions fréquentes" />
+        </div>
         <div className="faq-header">
           <h1>Questions fréquentes</h1>
         </div>

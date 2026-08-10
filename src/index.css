@@ -47,10 +47,10 @@ nav a:hover::after { width: 100%; }
 .hero .compass-mark { top: -140px; right: -160px; width: 520px; height: 520px; }
 .hero .wrap { position: relative; z-index: 2; }
 
-/* ---------- duotone photo treatment (hero + pillars + testi banner) ---------- */
-.hero-image, .pillar-image, .testi-banner { position: relative; overflow: hidden; }
-.hero-image img, .pillar-image img, .testi-banner img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(100%) contrast(1.08) brightness(1.02); }
-.hero-image::after, .pillar-image::after, .testi-banner::after {
+/* ---------- duotone photo treatment (hero + pillars + testi/faq banners) ---------- */
+.hero-image, .pillar-image, .testi-banner, .faq-banner { position: relative; overflow: hidden; }
+.hero-image img, .pillar-image img, .testi-banner img, .faq-banner img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(100%) contrast(1.08) brightness(1.02); }
+.hero-image::after, .pillar-image::after, .testi-banner::after, .faq-banner::after {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(135deg, var(--indigo) 0%, var(--terracotta) 100%);
   mix-blend-mode: color; opacity: 0.88;
@@ -235,6 +235,8 @@ footer .logo { font-size: 16px; }
 
 /* ---------- FAQ ---------- */
 .faq-section { background: var(--bg-alt); padding: 100px 0 120px; }
+.faq-banner { width: 100%; aspect-ratio: 3 / 1; border-radius: 20px; margin-bottom: 40px; }
+.faq-banner img { object-position: center 30%; }
 .faq-header { max-width: 640px; margin: 0 auto 52px; text-align: center; }
 .faq-header h1 { font-size: 34px; color: var(--indigo-deep); font-weight: 700; }
 .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
@@ -335,6 +337,7 @@ footer .logo { font-size: 16px; }
   .testi-banner { border-radius: 14px; margin-bottom: 26px; }
   .article-section { padding: 36px 0 76px; }
   .faq-section { padding: 56px 0 76px; }
+  .faq-banner { border-radius: 14px; margin-bottom: 26px; }
 
   .section-head h2 { font-size: 24px; }
 
