@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import heroImg from "../assets/images/hero.jpg";
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -14,6 +15,9 @@ export default function Hero() {
           <line x1="30" y1="30" x2="170" y2="170" />
           <line x1="170" y1="30" x2="30" y2="170" />
         </svg>
+      </div>
+      <div className="hero-image">
+        <img src={heroImg} alt="Personne face à la mer, en pleine réflexion" />
       </div>
       <div className="wrap">
         <div className="eyebrow">Orientation &amp; avenir</div>
