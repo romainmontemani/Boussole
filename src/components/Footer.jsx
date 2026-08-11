@@ -20,10 +20,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-row footer-bottom">
-          <div className="footer-links">
-            <Link to="/faq" className="footer-link">FAQ</Link>
-            <Link to="/ressources" className="footer-link">Ressources d'aide</Link>
-          </div>
+          <Link to="/faq" className="footer-link">FAQ</Link>
 
           <div className="footer-social">
             {/* TODO: remplacer par les vrais liens Instagram/LinkedIn */}
@@ -58,7 +55,7 @@ export default function Footer() {
             </a>
           </div>
 
-          <span className="footer-spacer"></span>
+          <Link to="/ressources" className="footer-link footer-spacer">Ressources d'aide</Link>
         </div>
       </div>
     </footer>
