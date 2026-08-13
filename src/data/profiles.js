@@ -56,7 +56,7 @@ export const PROFILES = [
   },
   {
     id: "manuel-artisanal",
-    label: "Manuel-Artisanal",
+    label: "Manuel-artisanal",
     tagline: "Tu apprends en faisant, avec tes mains autant qu'avec ta tête.",
     description:
       "Ce qui te parle, c'est le geste concret : fabriquer, réparer, transformer la matière. Tu apprends en pratiquant plutôt qu'en lisant, et un objet bien fait vaut souvent mieux qu'un long discours.",
