@@ -19,7 +19,7 @@ const PILLARS = [
   {
     num: "02",
     title: "Inspiration & conseils",
-    text: "Des parcours réels de jeunes et d'adultes en reconversion, racontés jusqu'au bout — avec le conseil qu'ils auraient aimé recevoir.",
+    text: "Des parcours réels de jeunes et d'adultes en reconversion, racontés jusqu'au bout, avec le conseil qu'ils auraient aimé recevoir.",
     image: pilierInspirationImg,
     alt: "Échange entre deux personnes autour d'un conseil d'orientation",
     icon: (
@@ -32,7 +32,7 @@ const PILLARS = [
   {
     num: "03",
     title: "Déculpabiliser",
-    text: "Douter de son avenir n'est pas un échec — c'est une étape que traversent la majorité des jeunes, et beaucoup d'adultes aussi. Tu n'es pas seul(e), même si ça y ressemble parfois.",
+    text: "Douter de son avenir n'est pas un échec. C'est une étape que traversent la majorité des jeunes, et beaucoup d'adultes aussi. Tu n'es pas seul(e), même si ça y ressemble parfois.",
     image: pilierDeculpabiliserImg,
     alt: "Personne apaisée, sans jugement sur son parcours",
     icon: (

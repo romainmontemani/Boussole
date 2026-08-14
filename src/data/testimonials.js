@@ -41,7 +41,7 @@ export const TESTIMONIALS = [
     contexte:
       "J'ai arrêté ma prépa au milieu de la deuxième année. Sur le papier, c'était un échec, et c'est comme ça que je l'ai vécu pendant plusieurs mois : comme une preuve que je n'étais pas assez bon, pas assez rigoureux, pas assez « fait pour » réussir.",
     declic:
-      "Ce que je n'avais pas vu, c'est que je m'étais épuisé à essayer de rentrer dans un moule qui ne me correspondait pas. J'avais besoin de contact humain, d'action concrète, de sentir que ce que je faisais avait un impact immédiat sur quelqu'un — pas seulement sur une copie notée.",
+      "Ce que je n'avais pas vu, c'est que je m'étais épuisé à essayer de rentrer dans un moule qui ne me correspondait pas. J'avais besoin de contact humain, d'action concrète, de sentir que ce que je faisais avait un impact immédiat sur quelqu'un, pas seulement sur une copie notée.",
     aujourdhui:
       "La reconversion n'a pas été un chemin en ligne droite. Il a fallu accepter de recommencer, de poser des questions simples que j'aurais dû me poser bien avant : qu'est-ce qui me fait me sentir vivant au quotidien ? Avec qui, et pour qui, j'ai envie de travailler ? Je suis encore en plein dedans, mais pour la première fois depuis longtemps, j'avance sans avoir l'impression de me trahir.",
     conseil:
@@ -63,7 +63,7 @@ export const TESTIMONIALS = [
     aujourdhui:
       "Décider de candidater en BTS Design graphique, c'était accepter de prendre un risque que mon entourage ne comprenait pas totalement. Mais depuis la rentrée, pour la première fois, mon travail scolaire et ce qui m'anime vraiment sont la même chose.",
     conseil:
-      "Je ne dis pas que c'est facile ni que c'est un chemin tout tracé. Mais je n'ai plus l'impression de choisir entre « faire ce que j'aime » et « faire quelque chose de sérieux » — et ça change tout.",
+      "Je ne dis pas que c'est facile ni que c'est un chemin tout tracé. Mais je n'ai plus l'impression de choisir entre « faire ce que j'aime » et « faire quelque chose de sérieux ». Et ça change tout.",
     photo: null
   },
   {
@@ -77,7 +77,7 @@ export const TESTIMONIALS = [
     contexte:
       "Pendant longtemps, j'ai eu l'impression d'être le seul de mon groupe à préférer construire le planning plutôt que d'être celui qui « fabrique » concrètement le rendu final. J'avais l'impression que mon rôle était secondaire, presque un aveu que je ne savais pas faire autre chose.",
     declic:
-      "Avec le temps, j'ai réalisé que sans quelqu'un pour structurer, prioriser et faire tenir un cap commun, la plupart des projets de groupe partaient dans tous les sens. Ce n'était pas un rôle « en creux », c'était une compétence à part entière — et une compétence recherchée.",
+      "Avec le temps, j'ai réalisé que sans quelqu'un pour structurer, prioriser et faire tenir un cap commun, la plupart des projets de groupe partaient dans tous les sens. Ce n'était pas un rôle « en creux », c'était une compétence à part entière. Et recherchée.",
     aujourdhui:
       "En Master Management de projet, j'ai enfin un cadre où cette façon de penser est reconnue comme une expertise, pas comme un défaut d'implication. Organiser, anticiper, faire avancer un collectif : c'est un métier, avec ses propres outils et sa propre exigence.",
     conseil:
@@ -95,9 +95,9 @@ export const TESTIMONIALS = [
     contexte:
       "[Témoignage provisoire, à remplacer par une vraie interview] Au collège puis au lycée, j'ai souvent eu droit à la même remarque déguisée en question : « oui mais après, tu comptes faire quoi, sérieusement ? » Comme si aimer travailler le bois, couper, poncer, assembler, n'était qu'une étape avant de « vraies » études.",
     declic:
-      "Pourtant, c'est le seul endroit où j'avais l'impression de vraiment progresser. Voir une planche brute devenir un meuble fini, avec ses propres mains, ça m'apprenait autant de patience que de précision — et ça ne rentrait dans aucune case scolaire classique.",
+      "Pourtant, c'est le seul endroit où j'avais l'impression de vraiment progresser. Voir une planche brute devenir un meuble fini, avec ses propres mains, ça m'apprenait autant de patience que de précision, et ça ne rentrait dans aucune case scolaire classique.",
     aujourdhui:
-      "Le CAP Ébénisterie n'a pas été un repli après un échec, c'est le premier choix que j'ai fait vraiment pour moi. Il y a une rigueur technique énorme derrière chaque assemblage, chaque finition — ce n'est pas « moins intellectuel », c'est juste une autre forme d'intelligence, celle du geste.",
+      "Le CAP Ébénisterie n'a pas été un repli après un échec, c'est le premier choix que j'ai fait vraiment pour moi. Il y a une rigueur technique énorme derrière chaque assemblage, chaque finition. Ce n'est pas « moins intellectuel », c'est juste une autre forme d'intelligence, celle du geste.",
     conseil:
       "Aujourd'hui quand on me demande ce que je fais, je n'ai plus besoin de me justifier. Je fabrique des objets qui vont durer des années dans le salon de quelqu'un, et il n'y a pas grand-chose qui me rend aussi fier que ça.",
     photo: null

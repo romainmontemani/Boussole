@@ -34,7 +34,7 @@ const RESSOURCES_ITEMS = [
   {
     question: "Parler à quelqu'un",
     answer:
-      "Un CIO (Centre d'Information et d'Orientation) près de chez toi — gratuit, sans rendez-vous dans beaucoup de cas. Une Mission Locale si tu as entre 16 et 25 ans — pour l'orientation, la formation, l'emploi. Le psychologue de l'Éducation nationale de ton établissement, si tu es encore scolarisé.",
+      "Un CIO (Centre d'Information et d'Orientation) près de chez toi, gratuit et souvent sans rendez-vous. Une Mission Locale si tu as entre 16 et 25 ans, pour l'orientation, la formation, l'emploi. Le psychologue de l'Éducation nationale de ton établissement, si tu es encore scolarisé.",
   },
   {
     question: "Si le doute dépasse juste l'orientation",

@@ -33,7 +33,7 @@ export const PROFILES = [
     label: "Créatif-expression",
     tagline: "Tu as besoin d'espace pour inventer et t'exprimer.",
     description:
-      "Les cadres trop rigides t'étouffent. Tu avances par l'intuition, l'image, l'écriture ou le son — et tu as besoin que ton travail te ressemble.",
+      "Les cadres trop rigides t'étouffent. Tu avances par l'intuition, l'image, l'écriture ou le son, et tu as besoin que ton travail te ressemble.",
     pistes: [
       "Filières artistiques, design ou communication",
       "Écoles qui valorisent le projet personnel",

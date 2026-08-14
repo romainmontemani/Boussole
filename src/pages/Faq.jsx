@@ -32,7 +32,7 @@ const FAQ_ITEMS = [
   {
     question: "C'est quoi un \"parcours\" ?",
     answer:
-      "C'est le témoignage d'une personne réelle qui a vécu une situation proche de la tienne — son contexte, son déclic, où elle en est aujourd'hui, et un conseil qu'elle aurait aimé recevoir.",
+      "C'est le témoignage d'une personne réelle qui a vécu une situation proche de la tienne : son contexte, son déclic, où elle en est aujourd'hui, et un conseil qu'elle aurait aimé recevoir.",
   },
   {
     question: "Les témoignages sont-ils vrais ?",

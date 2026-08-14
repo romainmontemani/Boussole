@@ -308,7 +308,7 @@ export default function Quiz() {
               Profil {profile.label}
             </span>
             <p className="result-disclaimer">
-              Ce profil éclaire des pistes — il ne doit jamais dicter ton choix.
+              Ce profil éclaire des pistes. Il ne doit jamais dicter ton choix.
             </p>
             <h3>{profile.tagline}</h3>
             <p className="result-desc">{profile.description}</p>
@@ -399,7 +399,7 @@ export default function Quiz() {
           </p>
           {step === 0 && (
             <p className="quiz-intro-note">
-              Il n'y a pas de bonne ou de mauvaise réponse — réponds avec ce
+              Il n'y a pas de bonne ou de mauvaise réponse : réponds avec ce
               qui te vient naturellement.
             </p>
           )}

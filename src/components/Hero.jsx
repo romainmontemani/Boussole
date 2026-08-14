@@ -28,7 +28,7 @@ export default function Hero() {
         </h1>
         <p className="lead">
           Un espace pensé pour t'aider à voir plus clair dans tes choix de
-          formation, d'études et d'orientation — sans jugement, sans jargon.
+          formation, d'études et d'orientation. Sans jugement, sans jargon.
         </p>
         <div className="cta-row">
           <button className="btn-primary" onClick={() => navigate("/quiz")}>
