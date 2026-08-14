@@ -224,6 +224,10 @@ export default function Quiz() {
     setTimeout(() => setStep((s) => s + 1), 250);
   };
 
+  const goToPrevious = () => {
+    setStep((s) => Math.max(0, s - 1));
+  };
+
   const restart = () => {
     setStep(0);
     setAnswers([]);
@@ -406,6 +410,19 @@ export default function Quiz() {
         </div>
         <div className="quiz-panel">
           <div>
+            <button
+              type="button"
+              className="quiz-back-btn"
+              onClick={goToPrevious}
+              disabled={step === 0}
+              aria-label="Revenir à la question précédente"
+              style={{ visibility: step === 0 ? "hidden" : "visible" }}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 12H5M11 18l-6-6 6-6" />
+              </svg>
+              <span className="label">Précédent</span>
+            </button>
             <div className="progress-track">
               <div className="progress-fill" style={{ width: `${progress * 100}%` }} />
             </div>
