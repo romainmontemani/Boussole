@@ -79,6 +79,23 @@ nav a:hover::after { width: 100%; }
 .btn-ghost { color: var(--indigo-deep); font-weight: 600; font-size: 15px; text-decoration: none; display: flex; align-items: center; gap: 8px; background: none; border: none; cursor: pointer; }
 .btn-ghost svg { width: 16px; height: 16px; }
 
+/* ---------- how it works (accueil) ---------- */
+.how-section { background: var(--bg-alt); padding: 100px 0; }
+.how-steps { margin-top: 52px; display: flex; align-items: stretch; }
+.how-step {
+  flex: 1; background: #fff; border: 1px solid var(--line); border-radius: 14px;
+  padding: 34px 28px; text-align: center; transition: transform .2s ease, box-shadow .2s ease;
+}
+.how-step-num {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--indigo); color: #fff;
+  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 16px;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;
+}
+.how-step h3 { font-size: 18px; color: var(--indigo-deep); margin-bottom: 8px; }
+.how-step p { font-size: 14px; color: var(--text-soft); }
+.how-connector { flex: 0 0 48px; display: flex; align-items: center; justify-content: center; color: var(--sauge); opacity: 0.6; }
+.how-connector svg { width: 20px; height: 20px; }
+
 /* ---------- pillars ---------- */
 .pillars { padding: 20px 0 100px; position: relative; }
 .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 52px; }
@@ -93,19 +110,35 @@ nav a:hover::after { width: 100%; }
 .pillar-card h3 { font-size: 19px; color: var(--indigo-deep); margin-bottom: 10px; }
 .pillar-card p { font-size: 14.5px; color: var(--text-soft); }
 
-/* ---------- featured quote (accueil) ---------- */
-.home-quote-section { padding: 0 0 100px; text-align: center; }
-.home-quote {
-  display: inline-block; max-width: 640px; margin: 0 auto; text-align: left;
-  text-decoration: none; color: inherit; border-left: 3px solid var(--terracotta);
-  padding: 6px 0 6px 26px; transition: opacity .2s ease;
+/* ---------- profils (accueil) ---------- */
+.profiles-section { padding: 20px 0 100px; }
+.profiles-grid { margin-top: 52px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+.profile-pill {
+  background: #fff; border: 1px solid var(--line); border-radius: 14px;
+  padding: 26px 18px; text-align: center; transition: transform .2s ease, box-shadow .2s ease;
 }
-.home-quote:hover { opacity: 0.75; }
-.home-quote p {
-  font-family: 'Sora', sans-serif; font-size: 24px; font-weight: 600;
-  color: var(--indigo-deep); line-height: 1.4;
+.profile-pill-dot { display: block; width: 14px; height: 14px; border-radius: 50%; margin: 0 auto 14px; }
+.profile-pill h3 { font-family: 'Sora', sans-serif; font-size: 14.5px; color: var(--indigo-deep); font-weight: 700; margin-bottom: 6px; }
+.profile-pill p { font-size: 12.5px; color: var(--text-soft); line-height: 1.4; }
+.profiles-cta { margin-top: 40px; text-align: center; }
+
+/* ---------- aperçu témoignages (accueil) ---------- */
+.home-testi-section { padding: 0 0 100px; }
+.home-testi-grid { margin-top: 52px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.home-testi-cta { margin-top: 40px; text-align: center; }
+
+/* ---------- bandeau CTA (accueil) ---------- */
+.cta-section { padding: 0 0 100px; }
+.cta-banner {
+  background: linear-gradient(135deg, var(--indigo) 0%, var(--terracotta) 100%);
+  border-radius: 24px; padding: 64px 40px; text-align: center;
 }
-.home-quote-author { display: block; margin-top: 14px; font-size: 14px; color: var(--text-soft); font-weight: 500; }
+.cta-banner h2 { font-size: 30px; font-weight: 700; color: #fff; margin-bottom: 28px; }
+.cta-banner .btn-primary {
+  background: #fff; color: var(--indigo-deep);
+  box-shadow: 0 10px 24px -10px rgba(0,0,0,0.25);
+}
+.cta-banner .btn-primary:hover { box-shadow: 0 14px 28px -10px rgba(0,0,0,0.35); }
 
 .section-head { max-width: 560px; }
 .section-head .eyebrow { margin-bottom: 14px; }
@@ -321,7 +354,8 @@ footer .logo { font-size: 16px; }
 .pillar-card.reveal-item { transition: opacity 0.7s ease, translate 0.7s ease, transform .2s ease, box-shadow .2s ease; }
 .testi-card.reveal-item { transition: opacity 0.7s ease, translate 0.7s ease, transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
 .faq-item.reveal-item { transition: opacity 0.7s ease, translate 0.7s ease, transform .2s ease, box-shadow .2s ease; }
-.home-quote.reveal-item { transition: opacity 0.7s ease, translate 0.7s ease; }
+.how-step.reveal-item { transition: opacity 0.7s ease, translate 0.7s ease, transform .2s ease, box-shadow .2s ease; }
+.profile-pill.reveal-item { transition: opacity 0.7s ease, translate 0.7s ease, transform .2s ease, box-shadow .2s ease; }
 
 .hero .wrap > .reveal-item:nth-child(1) { transition-delay: 0ms; }
 .hero .wrap > .reveal-item:nth-child(2) { transition-delay: 100ms; }
@@ -335,7 +369,8 @@ footer .logo { font-size: 16px; }
   .pillar-card.reveal-item { opacity: 1; translate: 0 0; transition: transform .2s ease, box-shadow .2s ease; }
   .testi-card.reveal-item { opacity: 1; translate: 0 0; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
   .faq-item.reveal-item { opacity: 1; translate: 0 0; transition: transform .2s ease, box-shadow .2s ease; }
-  .home-quote.reveal-item { opacity: 1; translate: 0 0; transition: opacity .2s ease; }
+  .how-step.reveal-item { opacity: 1; translate: 0 0; transition: transform .2s ease, box-shadow .2s ease; }
+  .profile-pill.reveal-item { opacity: 1; translate: 0 0; transition: transform .2s ease, box-shadow .2s ease; }
 }
 
 /* ---------- hover cartes/blocs interactifs ----------
@@ -347,6 +382,8 @@ footer .logo { font-size: 16px; }
   .testi-card:hover { transform: scale(1.025); box-shadow: 0 16px 32px -18px rgba(42,36,71,0.25); border-color: var(--terracotta); }
   .faq-item:hover { transform: scale(1.02); box-shadow: 0 16px 32px -18px rgba(42,36,71,0.25); }
   .option:hover { transform: scale(1.015); box-shadow: 0 8px 20px -12px rgba(42,36,71,0.18); }
+  .how-step:hover { transform: scale(1.02); box-shadow: 0 16px 32px -18px rgba(42,36,71,0.25); }
+  .profile-pill:hover { transform: scale(1.03); box-shadow: 0 16px 32px -18px rgba(42,36,71,0.25); }
 }
 
 @media (max-width: 820px) {
@@ -370,7 +407,12 @@ footer .logo { font-size: 16px; }
   .hero h1 { font-size: 38px; }
   .article-card { padding: 30px; }
   .article-head { flex-direction: column; align-items: flex-start; }
-  .home-quote p { font-size: 19px; }
+
+  .how-steps { flex-direction: column; }
+  .how-connector { flex: 0 0 auto; width: 100%; height: 32px; }
+  .how-connector svg { transform: rotate(90deg); }
+  .profiles-grid { grid-template-columns: repeat(2, 1fr); }
+  .home-testi-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- mobile (phones) ---------- */
@@ -398,7 +440,10 @@ footer .logo { font-size: 16px; }
   .hero { padding: 64px 0 52px; }
   .hero h1 { font-size: 32px; }
   .pillars { padding: 8px 0 60px; }
-  .home-quote-section { padding: 0 0 60px; }
+  .how-section { padding: 56px 0; }
+  .profiles-section { padding: 8px 0 60px; }
+  .home-testi-section { padding: 0 0 60px; }
+  .cta-section { padding: 0 0 60px; }
   .quiz-section { padding: 60px 0; }
   .testi-section { padding: 60px 0 76px; }
   .testi-banner { border-radius: 14px; margin-bottom: 26px; }
@@ -411,6 +456,10 @@ footer .logo { font-size: 16px; }
 
   /* cards: reduce padding so content isn't cramped edge-to-edge */
   .pillar-card { padding: 24px 20px; }
+  .how-step { padding: 24px 20px; }
+  .profile-pill { padding: 20px 14px; }
+  .cta-banner { padding: 44px 26px; }
+  .cta-banner h2 { font-size: 24px; }
   .quiz-panel { padding: 22px; gap: 28px; }
   .quiz-back-btn { padding: 10px 6px; margin: -10px 0 8px -6px; font-size: 14px; }
   .compass-dial { max-width: 220px; margin: 0 auto; }

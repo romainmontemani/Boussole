@@ -4,7 +4,7 @@ import { PROFILES } from "../data/profiles.js";
 import { TESTIMONIALS } from "../data/testimonials.js";
 import pilierDeculpabiliserImg from "../assets/images/pilier-deculpabiliser.jpg";
 
-function TestiCard({ testimonial, profile }) {
+export function TestiCard({ testimonial, profile }) {
   const [ref, isVisible] = useReveal();
   const author = `${testimonial.name}, ${testimonial.age} ans — ${testimonial.formation}`;
 
