@@ -1,8 +1,18 @@
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import heroImg from "../assets/images/hero.jpg";
 
 export default function Hero() {
   const navigate = useNavigate();
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setVisible(true));
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  const revealClass = (extra = "") =>
+    `reveal-item${visible ? " is-visible" : ""}${extra ? ` ${extra}` : ""}`;
 
   return (
     <section className="hero" id="accueil">
@@ -20,17 +30,17 @@ export default function Hero() {
         <img src={heroImg} alt="Personne face à la mer, en pleine réflexion" />
       </div>
       <div className="wrap">
-        <div className="eyebrow">Orientation &amp; avenir</div>
-        <h1>
+        <div className={revealClass("eyebrow")}>Orientation &amp; avenir</div>
+        <h1 className={revealClass()}>
           Retrouve le nord
           <br />
           de ton <span>avenir</span>.
         </h1>
-        <p className="lead">
+        <p className={revealClass("lead")}>
           Un espace pensé pour t'aider à voir plus clair dans tes choix de
           formation, d'études et d'orientation. Sans jugement, sans jargon.
         </p>
-        <div className="cta-row">
+        <div className={revealClass("cta-row")}>
           <button className="btn-primary" onClick={() => navigate("/quiz")}>
             Commencer le quiz
           </button>

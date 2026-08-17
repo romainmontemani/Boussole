@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useReveal } from "../lib/useReveal.js";
 import ressourcesImg from "../assets/images/ressources.jpg";
 
 const RESSOURCES_ITEMS = [
@@ -50,6 +51,35 @@ const RESSOURCES_ITEMS = [
   },
 ];
 
+function RessourceItem({ item, isOpen, onToggle }) {
+  const [ref, isVisible] = useReveal();
+
+  return (
+    <div
+      className={`faq-item reveal-item${isOpen ? " open" : ""}${isVisible ? " is-visible" : ""}`}
+      ref={ref}
+    >
+      <button className="faq-question" onClick={onToggle} aria-expanded={isOpen}>
+        <span>{item.question}</span>
+        <svg
+          className="faq-chevron"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      <div className="faq-answer-wrap">
+        <div className="faq-answer-inner">
+          <p className="faq-answer">{item.answer}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Ressources() {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -67,34 +97,14 @@ export default function Ressources() {
           <h1>Ressources d'aide</h1>
         </div>
         <div className="faq-list">
-          {RESSOURCES_ITEMS.map((item, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div className={`faq-item${isOpen ? " open" : ""}`} key={item.question}>
-                <button
-                  className="faq-question"
-                  onClick={() => toggle(index)}
-                  aria-expanded={isOpen}
-                >
-                  <span>{item.question}</span>
-                  <svg
-                    className="faq-chevron"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M6 9l6 6 6-6" />
-                  </svg>
-                </button>
-                <div className="faq-answer-wrap">
-                  <div className="faq-answer-inner">
-                    <p className="faq-answer">{item.answer}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          {RESSOURCES_ITEMS.map((item, index) => (
+            <RessourceItem
+              item={item}
+              isOpen={openIndex === index}
+              onToggle={() => toggle(index)}
+              key={item.question}
+            />
+          ))}
         </div>
       </div>
     </section>

@@ -304,6 +304,40 @@ footer .logo { font-size: 16px; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ---------- animations d'apparition (hero + scroll reveal) ----------
+   Utilise `translate` (et non `transform`) pour le glissement : certaines
+   cartes (pillar-card, testi-card, faq-item) animent déjà `transform` au
+   survol, `translate` évite d'écraser cet effet. */
+.reveal-item {
+  opacity: 0;
+  translate: 0 20px;
+  transition: opacity 0.7s ease, translate 0.7s ease;
+}
+.reveal-item.is-visible { opacity: 1; translate: 0 0; }
+
+/* Fusion explicite avec les transitions de survol déjà déclarées sur ces
+   cartes, pour que les deux jeux de transitions cohabitent (une règle
+   `transition` unique gagne toujours, elle ne se fusionne pas seule). */
+.pillar-card.reveal-item { transition: opacity 0.7s ease, translate 0.7s ease, transform .2s ease, box-shadow .2s ease; }
+.testi-card.reveal-item { transition: opacity 0.7s ease, translate 0.7s ease, transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.faq-item.reveal-item { transition: opacity 0.7s ease, translate 0.7s ease, transform .2s ease, box-shadow .2s ease; }
+.home-quote.reveal-item { transition: opacity 0.7s ease, translate 0.7s ease; }
+
+.hero .wrap > .reveal-item:nth-child(1) { transition-delay: 0ms; }
+.hero .wrap > .reveal-item:nth-child(2) { transition-delay: 100ms; }
+.hero .wrap > .reveal-item:nth-child(3) { transition-delay: 200ms; }
+.hero .wrap > .reveal-item:nth-child(4) { transition-delay: 300ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* Coupe uniquement la transition d'apparition ; les transitions de
+     survol déjà en place sur ces cartes restent actives. */
+  .reveal-item { opacity: 1; translate: 0 0; transition: none; }
+  .pillar-card.reveal-item { opacity: 1; translate: 0 0; transition: transform .2s ease, box-shadow .2s ease; }
+  .testi-card.reveal-item { opacity: 1; translate: 0 0; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .faq-item.reveal-item { opacity: 1; translate: 0 0; transition: transform .2s ease, box-shadow .2s ease; }
+  .home-quote.reveal-item { opacity: 1; translate: 0 0; transition: opacity .2s ease; }
+}
+
 /* ---------- hover cartes/blocs interactifs ----------
    Regroupé sous (hover: hover) et (pointer: fine) pour ne cibler que les
    dispositifs à pointeur réel : sur tactile, :hover peut rester "collé"

@@ -1,3 +1,4 @@
+import { useReveal } from "../lib/useReveal.js";
 import pilierClarteImg from "../assets/images/pilier-clarte.jpg";
 import pilierInspirationImg from "../assets/images/pilier-inspiration.jpg";
 import pilierDeculpabiliserImg from "../assets/images/pilier-deculpabiliser.jpg";
@@ -46,6 +47,26 @@ const PILLARS = [
   }
 ];
 
+function PillarCard({ pillar, index }) {
+  const [ref, isVisible] = useReveal();
+
+  return (
+    <div
+      className={`pillar-card reveal-item${isVisible ? " is-visible" : ""}`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+      ref={ref}
+    >
+      <div className="num">{pillar.num}</div>
+      <div className="pillar-image">
+        <img src={pillar.image} alt={pillar.alt} loading="lazy" />
+      </div>
+      <div className="icon-circle">{pillar.icon}</div>
+      <h3>{pillar.title}</h3>
+      <p>{pillar.text}</p>
+    </div>
+  );
+}
+
 export default function Pillars() {
   return (
     <section className="pillars">
@@ -55,16 +76,8 @@ export default function Pillars() {
           <h2>Trois piliers, un seul objectif : avancer.</h2>
         </div>
         <div className="pillars-grid">
-          {PILLARS.map((p) => (
-            <div className="pillar-card" key={p.num}>
-              <div className="num">{p.num}</div>
-              <div className="pillar-image">
-                <img src={p.image} alt={p.alt} loading="lazy" />
-              </div>
-              <div className="icon-circle">{p.icon}</div>
-              <h3>{p.title}</h3>
-              <p>{p.text}</p>
-            </div>
+          {PILLARS.map((p, index) => (
+            <PillarCard pillar={p} index={index} key={p.num} />
           ))}
         </div>
       </div>
