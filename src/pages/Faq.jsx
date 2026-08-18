@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useReveal } from "../lib/useReveal.js";
+import CompassMark from "../components/CompassMark.jsx";
 import faqImg from "../assets/images/faq.jpg";
 
 const FAQ_ITEMS = [
@@ -101,6 +102,7 @@ export default function Faq() {
 
   return (
     <section className="faq-section">
+      <CompassMark spin />
       <div className="wrap">
         <div className="faq-banner">
           <img src={faqImg} alt="Personne qui consulte des questions fréquentes" />

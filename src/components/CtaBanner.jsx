@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useReveal } from "../lib/useReveal.js";
+import CompassMark from "./CompassMark.jsx";
 
 export default function CtaBanner() {
   const navigate = useNavigate();
@@ -9,10 +10,13 @@ export default function CtaBanner() {
     <section className="cta-section">
       <div className="wrap">
         <div className={`cta-banner reveal-item${isVisible ? " is-visible" : ""}`} ref={ref}>
-          <h2>Prêt à voir plus clair ?</h2>
-          <button className="btn-primary" onClick={() => navigate("/quiz")}>
-            Commencer le quiz
-          </button>
+          <CompassMark spin />
+          <div className="cta-banner-content">
+            <h2>Prêt à voir plus clair ?</h2>
+            <button className="btn-primary" onClick={() => navigate("/quiz")}>
+              Commencer le quiz
+            </button>
+          </div>
         </div>
       </div>
     </section>

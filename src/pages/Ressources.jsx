@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useReveal } from "../lib/useReveal.js";
+import CompassMark from "../components/CompassMark.jsx";
 import ressourcesImg from "../assets/images/ressources.jpg";
 
 const RESSOURCES_ITEMS = [
@@ -89,6 +90,7 @@ export default function Ressources() {
 
   return (
     <section className="faq-section">
+      <CompassMark spin />
       <div className="wrap">
         <div className="faq-banner">
           <img src={ressourcesImg} alt="Groupe de jeunes qui échangent" />
