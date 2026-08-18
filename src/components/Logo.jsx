@@ -15,7 +15,12 @@ export default function Logo({ size = 26, withLabel = true, color = "currentColo
         strokeLinejoin="round"
       >
         <circle cx="12" cy="12" r="9.4" />
-        <polygon points="15,9 12.6,12.6 9,15 11.4,11.4" fill="var(--terracotta)" stroke="none" />
+        <polygon
+          className="logo-needle"
+          points="15,9 12.6,12.6 9,15 11.4,11.4"
+          fill="var(--terracotta)"
+          stroke="none"
+        />
       </svg>
       {withLabel && "Boussole"}
     </div>
