@@ -20,7 +20,10 @@ export default function Footer() {
         </div>
 
         <div className="footer-row footer-bottom">
-          <Link to="/faq" className="footer-link">FAQ</Link>
+          <div className="footer-links">
+            <Link to="/faq" className="footer-link">FAQ</Link>
+            <Link to="/conseils" className="footer-link">Conseils</Link>
+          </div>
 
           <div className="footer-social">
             {/* TODO: remplacer par les vrais liens Instagram/LinkedIn */}

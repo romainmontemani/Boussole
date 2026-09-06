@@ -8,6 +8,8 @@ import Home from "./pages/Home.jsx";
 import TestimonialPage from "./pages/TestimonialPage.jsx";
 import Faq from "./pages/Faq.jsx";
 import Ressources from "./pages/Ressources.jsx";
+import Conseils from "./pages/Conseils.jsx";
+import ConseilPage from "./pages/ConseilPage.jsx";
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Route path="/parcours/:id" element={<TestimonialPage />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/ressources" element={<Ressources />} />
+        <Route path="/conseils" element={<Conseils />} />
+        <Route path="/conseils/:id" element={<ConseilPage />} />
       </Routes>
       <Footer />
       <InstallBanner />

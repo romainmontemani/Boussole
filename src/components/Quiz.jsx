@@ -52,7 +52,7 @@ const QUESTIONS = [
     ]
   },
   {
-    text: "En cours, tu te sens le plus à l'aise dans...",
+    text: "Ce qui te correspond le plus aujourd'hui, que ce soit en cours, en formation ou au travail...",
     weight: 1,
     options: [
       { text: "Les matières scientifiques (maths, physique, SVT)", scores: { analytique: 3 } },
@@ -156,6 +156,42 @@ const QUESTIONS = [
   }
 ];
 
+// Micro-question purement informative, affichée sous le résultat une fois le
+// profil calculé. Elle n'a aucun impact sur le scoring (voir computeResult) :
+// la réponse choisie ne fait que révéler un court message + un lien, et n'est
+// jamais stockée nulle part (state React local, perdu à la fermeture/au
+// rechargement de la page).
+const DOUBT_OPTIONS = [
+  {
+    text: "J'ai peur de me tromper",
+    message:
+      "C'est normal d'avoir peur de te tromper. Ce profil n'est qu'une piste, pas une décision figée — tu peux avancer, te tromper, changer d'avis, revenir en arrière. C'est même comme ça que la plupart des gens trouvent leur voie.",
+    linkLabel: "Voir la FAQ",
+    linkTo: "/faq"
+  },
+  {
+    text: "Je sens une pression de mes proches",
+    message:
+      "La pression de l'entourage, beaucoup de monde la connaît. Plusieurs des parcours sur Boussole parlent justement de ça — le jugement des autres, et comment ils ont fait avec.",
+    linkLabel: "Lire des parcours",
+    linkTo: "/parcours"
+  },
+  {
+    text: "Je ne sais pas par où commencer",
+    message:
+      "Pas besoin de tout savoir d'un coup. Il existe des personnes et des ressources gratuites pour t'aider à avancer, pas à pas.",
+    linkLabel: "Voir les ressources d'aide",
+    linkTo: "/ressources"
+  },
+  {
+    text: "Je me sens seul·e dans cette réflexion",
+    message:
+      "Tu n'es pas seul(e), même si ça y ressemble parfois. D'autres ont traversé ce doute avant toi, et ont accepté de raconter leur histoire pour ça.",
+    linkLabel: "Lire leurs parcours",
+    linkTo: "/parcours"
+  }
+];
+
 const RING_CIRCUMFERENCE = 691;
 
 // Score = somme(points de l'option choisie x poids de la question) par profil.
@@ -190,6 +226,13 @@ export default function Quiz() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState([]);
   const isFinished = step >= QUESTIONS.length;
+
+  // Sélection dans la micro-question "doute" affichée après le résultat :
+  // un simple index d'option, jamais envoyé nulle part ni mêlé au scoring.
+  const [doubtIndex, setDoubtIndex] = useState(null);
+  const selectDoubt = (index) => {
+    setDoubtIndex((current) => (current === index ? null : index));
+  };
 
   useEffect(() => {
     if (isFinished) {
@@ -231,6 +274,7 @@ export default function Quiz() {
   const restart = () => {
     setStep(0);
     setAnswers([]);
+    setDoubtIndex(null);
   };
 
   const shareRef = useRef(null);
@@ -379,6 +423,36 @@ export default function Quiz() {
                 </button>
               )}
             </div>
+          </div>
+
+          <div className="result-panel doubt-panel">
+            <h3>Et si on allait plus loin ?</h3>
+            <p className="result-desc">
+              Qu'est-ce qui te fait le plus douter en ce moment ?
+            </p>
+            <div className="options">
+              {DOUBT_OPTIONS.map((doubt, i) => (
+                <button
+                  key={doubt.text}
+                  type="button"
+                  className={`option${doubtIndex === i ? " selected" : ""}`}
+                  onClick={() => selectDoubt(i)}
+                >
+                  {doubt.text}
+                </button>
+              ))}
+            </div>
+            {doubtIndex !== null && (
+              <div className="doubt-answer">
+                <p>{DOUBT_OPTIONS[doubtIndex].message}</p>
+                <Link className="btn-ghost" to={DOUBT_OPTIONS[doubtIndex].linkTo}>
+                  {DOUBT_OPTIONS[doubtIndex].linkLabel}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
         <div className="share-offscreen" aria-hidden="true">
