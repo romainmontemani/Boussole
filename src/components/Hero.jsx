@@ -19,7 +19,7 @@ export default function Hero() {
     <section className="hero" id="accueil">
       <CompassMark spin />
       <div className="hero-image">
-        <img src={heroImg} alt="Personne face à la mer, en pleine réflexion" />
+        <img src={heroImg} alt="Personne levant les yeux vers des tours, en pleine ville" />
       </div>
       <div className="wrap">
         <div className={revealClass("eyebrow")}>Orientation &amp; avenir</div>
